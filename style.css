@@ -1,0 +1,87 @@
+.flag {
+	width: 400px;
+	margin: 20px auto;
+	box-shadow: 0 0 24px #AAA;
+	position: relative;
+	border: 1px solid #FFF;
+
+	-moz-transition: box-shadow 0.2s linear 0s;
+	-webkit-transition: box-shadow 0.2s linear 0s;
+	transition: border box-shadow 0.2s linear 0s;
+}
+
+.flag:after{
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+
+	-webkit-background-origin: border-box;
+	-moz-background-origin: border;
+	background-origin: border-box;
+
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), -webkit-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
+
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), -moz-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
+
+	background: linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
+}
+
+.flag:hover {
+	box-shadow: 0 0 24px rgba(82, 168, 236, 0.6);
+}
+
+.flag div {
+	height: 90px;
+}
+.flag .yellow {
+	background: #FECB00;
+}
+.flag .green {
+	background: #34B233;
+}
+.flag .red {
+	background: #EA2839;
+}
+
+.flag .star {
+	position: absolute;
+	width: 0px; height: 0px; top: 105px; left: 100px;
+
+	border-right: 100px solid transparent;
+	border-bottom: 70px solid white;
+	border-left: 100px solid transparent;
+
+	-moz-transform: rotate(35deg);
+	-webkit-transform: rotate(35deg);
+	transform: rotate(35deg);
+}
+.flag .star:before {
+	position: absolute;
+	width: 0; height: 0; top: -45px; left: -65px;
+	display: block;
+	content: '';
+
+	border-bottom: 70px solid white;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+
+	-moz-transform: rotate(-35deg);
+	-webkit-transform: rotate(-35deg);
+	transform: rotate(-35deg);
+}
+.flag .star:after {
+	position: absolute;
+	width: 0px; height: 0px; top: 3px; left: -105px;
+	display: block;
+	content: '';
+
+	border-right: 100px solid transparent;
+	border-bottom: 70px solid white;
+	border-left: 100px solid transparent;
+
+	-moz-transform: rotate(-70deg);
+	-webkit-transform: rotate(-70deg);
+	transform: rotate(-70deg);
+}
+
